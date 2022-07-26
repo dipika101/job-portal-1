@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js"
-    "pre-commit": "npm test"
+    "test": "tap tests/*.js",
   },
   "author": "",
   "license": "ISC",
