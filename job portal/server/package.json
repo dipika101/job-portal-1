@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/.bin/mocha 'tests/*.js'"
+    "test": "./node_modules/.bin/mocha 'tests/**/*.js'"
   },
   "author": "",
   "license": "ISC",
