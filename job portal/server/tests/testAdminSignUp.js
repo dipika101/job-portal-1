@@ -7,10 +7,10 @@ describe('User API', () => {
     describe('Create user validation ERROR', () => {
       describe('Create user missing field', () => {
         const payload = {
-          firstName: "",
-          lastName: "Doe",
+          name: "",
           email: "johndoe@recraftrelic.com",
-          password: "johndoe"
+          password: "johndoe",
+          id: "1234"
         }
   
         it('Status', done => {
@@ -26,7 +26,7 @@ describe('User API', () => {
           request.post(`${TESTING_URL}/user`, {
             json: payload
           }, (_, response) => {
-            expect(response.body.errors.firstName[0]).to.equal('First Name is required')
+            expect(response.body.errors.firstName[0]).to.equal('Name is required')
             done()
           })
         })
@@ -34,10 +34,10 @@ describe('User API', () => {
 
       describe('Create user invalid email field', () => {
         const payload = {
-          firstName: "firstname",
-          lastName: "Doe",
+          name: "Doe",
           email: "johndoe",
-          password: "johndoe"
+          password: "johndoe",
+          id: "1234"
         }
   
         it('Status', done => {
@@ -61,10 +61,10 @@ describe('User API', () => {
 
       describe('Create user duplicate', () => {
         const payload = {
-          firstName: "John",
-          lastName: "Doe",
+          name: "Doe",
           email: "johndoe@recraftrelic.com",
-          password: "johndoe"
+          password: "johndoe",
+          id: "1234"
         }
   
         it('Status', done => {
@@ -90,10 +90,10 @@ describe('User API', () => {
     it('Create user SUCCESS', done => {
       request.post(`${TESTING_URL}/user`, {
         json: {
-          firstName: "John",
-          lastName: "Doe",
+          name: "Doe",
           email: "johndoe@recraftrelic.com",
-          password: "johndoe"
+          password: "johndoe",
+          id: "1234"
         }
       }, (_, response) => {
         expect(response.statusCode).to.equal(200)
