@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha tests/*.js"
+    "test": "mocha middelware/*.js"
   },
   "author": "",
   "license": "ISC",
