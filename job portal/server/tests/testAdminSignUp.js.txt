@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 const request = require('request');
-const { TESTING_URL } = require('../../../constants/tests')
+const { TESTING_URL } = require('../constants/tests')
 
 describe('User API', () => {
   describe('CREATE USER', () => {
@@ -10,8 +10,7 @@ describe('User API', () => {
           firstName: "",
           lastName: "Doe",
           email: "johndoe@recraftrelic.com",
-          password: "johndoe",
-          employeeNo: "213"
+          password: "johndoe"
         }
   
         it('Status', done => {
@@ -38,8 +37,7 @@ describe('User API', () => {
           firstName: "firstname",
           lastName: "Doe",
           email: "johndoe",
-          password: "johndoe",
-          employeeNo: "213"
+          password: "johndoe"
         }
   
         it('Status', done => {
@@ -66,8 +64,7 @@ describe('User API', () => {
           firstName: "John",
           lastName: "Doe",
           email: "johndoe@recraftrelic.com",
-          password: "johndoe",
-          employeeNo: "213"
+          password: "johndoe"
         }
   
         it('Status', done => {
@@ -96,8 +93,7 @@ describe('User API', () => {
           firstName: "John",
           lastName: "Doe",
           email: "johndoe@recraftrelic.com",
-          password: "johndoe",
-          employeeNo: "213"
+          password: "johndoe"
         }
       }, (_, response) => {
         expect(response.statusCode).to.equal(200)
