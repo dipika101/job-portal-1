@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha tests/testadmin.js"
+    "test": "mocha tests/testAdminSignUp.js"
   },
   "author": "",
   "license": "ISC",
