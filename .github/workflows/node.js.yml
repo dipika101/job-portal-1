@@ -29,6 +29,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: './job portal/server/package.json'
+    - run: npm install jest
+    - run: npm install request
     - run: npm install
     - run: npm ci
     - run: npm run build --if-present
