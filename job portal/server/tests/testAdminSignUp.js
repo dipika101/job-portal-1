@@ -17,7 +17,7 @@ describe('User API', () => {
           request.post('http://localhost:3000/auth/admin', {
             json: payload
           }, (_, res) => {
-            expect(res.status).to.equal(200)
+            expect(res.statusCode).to.equal(200)
             done()
           })
         })
@@ -44,7 +44,7 @@ describe('User API', () => {
           request.post('http://localhost:3000/auth/admin', {
             json: payload
           }, (_, res) => {
-            expect(res.status).to.equal(200)
+            expect(res.statusCode).to.equal(200)
             done()
           })
         })
@@ -71,7 +71,7 @@ describe('User API', () => {
           request.post('http://localhost:3000/auth/admin', {
             json: payload
           }, (_, res) => {
-            expect(res.status).to.equal(200)
+            expect(res.statusCode).to.equal(200)
             done()
           })
         })
